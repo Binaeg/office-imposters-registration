@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
   const token = generateCancelToken(signup_id);
   const cancelUrl = `${base_url}/api/cancel?id=${encodeURIComponent(signup_id)}&token=${token}`;
 
-  await sendConfirmationEmail(email, name, time_slot, cancelUrl);
+  await sendConfirmationEmail(email, name, time_slot, cancelUrl, base_url);
 
   return NextResponse.json({ success: true });
 }

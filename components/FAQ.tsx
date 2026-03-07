@@ -10,7 +10,7 @@ const faqs = [
       'Office Imposters ist ein soziales Deduktionsspiel, bei dem Spieler versuchen, den Imposter unter ihren Kollegen zu entlarven. Office Imposters ist vergleichbar mit Among Us, Werwölfe oder Blood on the Clocktower.',
   },
   {
-    question: 'Muss ich ein eigenes mobiles Endgerät mitbringen?',
+    question: 'Was muss ich mitbringen?',
     answer:
       'Um Office Imposters spielen zu können, braucht jede*r Spieler*in ein eigenes mobiles Endgerät. Wenn das Gerät mobile Daten zur Verfügung hat, ist das super, wir werden aber auch ein WLAN zur Verfügung stellen.',
   },
@@ -32,6 +32,10 @@ const faqs = [
   {
     question: "Für welches Alter ist das Spiel geeignet?",
     answer: "Wir empfehlen das Spiel ab einem Alter von 12 Jahren. Nach oben hin gibt es keine Altersgrenze, auch ältere Menschen haben Spaß an dem Spiel!",
+  },
+  {
+    question: "Wo wird Office Imposters bei Konstanz spielt! stattfinden?",
+    answer: "Office Imposters wird im Coworkingspace St. Johann, Brückengasse 1b, 78462 Konstanz stattfinden."
   }
 ];
 

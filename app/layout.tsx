@@ -30,12 +30,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vintages.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${vintages.variable} antialiased`}>
         {children}
         <footer className="bg-[#233D4D] py-6 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} Office Imposters. Alle Rechte vorbehalten.
+          <div>© {new Date().getFullYear()} Office Imposters. Alle Rechte vorbehalten.</div>
+          <div>
+            <a href="https://schluesselmomente-escape-rooms.de/datenschutz/" className="hover:underline" target="_blank">
+              Datenschutz
+            </a>
+            <a href="https://schluesselmomente-escape-rooms.de/impressum/" className="ml-4 hover:underline" target="_blank">
+              Impressum
+            </a>
+            <a href="https://schluesselmomente-escape-rooms.de/uber-uns/" className="ml-4 hover:underline" target="_blank">
+              Über uns
+            </a>
+          </div>
         </footer>
       </body>
     </html>
