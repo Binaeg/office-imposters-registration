@@ -49,7 +49,7 @@ export default function FAQ() {
   return (
     <section className="bg-[#1a2e3a] py-20">
       <Container>
-        <h2 className="mb-10 text-center text-6xl font-family-vintages text-primary">
+        <h2 className="mb-10 text-center md:text-7xl text-5xl font-family-digitalt text-primary">
           Häufige Fragen
         </h2>
         <div className="mx-auto max-w-2xl space-y-3">

@@ -67,7 +67,7 @@ export default function SignupForm() {
   return (
     <section id="signup" className="bg-[#233D4D] py-20">
       <Container>
-        <h2 className="mb-8 text-center text-6xl font-family-vintages text-primary ">Jetzt bei Konstanz spielt! ausprobieren</h2>
+        <h2 className="mb-8 text-center md:text-7xl text-5xl font-family-digitalt text-primary ">Jetzt bei Konstanz spielt! ausprobieren</h2>
 
         {status === "success" ? (
           <div className="mx-auto max-w-md rounded-2xl bg-[#1a2e3a] p-8 text-center shadow-xl">

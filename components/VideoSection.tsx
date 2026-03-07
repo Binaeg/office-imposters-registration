@@ -4,7 +4,7 @@ export default function VideoSection() {
   return (
     <section className="bg-[#1a2e3a] py-16">
       <Container>
-        <h2 className="mb-10 text-center text-6xl font-family-vintages text-primary">Was ist Office Imposters?</h2>
+        <h2 className="mb-10 text-center md:text-7xl text-5xl font-family-digitalt text-primary">Was ist Office Imposters?</h2>
 
         {/* Desktop: video right, text left. Mobile: video top, text below. */}
         <div className="flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-center">

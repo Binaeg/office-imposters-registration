@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const vintages = localFont({
-  src: "../public/Vintages.woff2",
-  variable: "--font-vintages",
+const digitalt = localFont({
+  src: "../public/Digitalt.ttf",
+  variable: "--font-digitalt",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${vintages.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${digitalt.variable} antialiased`}>
         {children}
         <footer className="bg-[#233D4D] py-6 text-center text-sm text-gray-400">
           <div>© {new Date().getFullYear()} Office Imposters. Alle Rechte vorbehalten.</div>
