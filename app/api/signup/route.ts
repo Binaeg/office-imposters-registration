@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { supabaseServer } from '@/lib/supabase';
 import { VALID_SLOT_IDS, SLOT_MAX_CAPACITY } from '@/lib/slots';
 
@@ -79,13 +79,20 @@ export async function POST(request: NextRequest) {
 
   const signupId = (inserted as { id: string }).id;
 
-  // Fire-and-forget: call the email route without waiting for its result
+  // Use after() so Vercel keeps the function alive until the email fetch completes
   const baseUrl = request.nextUrl.origin;
-  fetch(`${baseUrl}/api/send-confirmation`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name: cleanName, email: cleanEmail, time_slot, base_url: baseUrl, signup_id: signupId }),
-  }).catch((err) => console.error('Email route fire-and-forget error:', err));
+  after(async () => {
+    try {
+      const res = await fetch(`${baseUrl}/api/send-confirmation`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: cleanName, email: cleanEmail, time_slot, base_url: baseUrl, signup_id: signupId }),
+      });
+      if (!res.ok) console.error('send-confirmation failed:', await res.text());
+    } catch (err) {
+      console.error('Email route error:', err);
+    }
+  });
 
   return NextResponse.json({ success: true }, { status: 201 });
 }
