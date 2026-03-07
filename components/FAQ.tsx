@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'Was muss ich mitbringen?',
     answer:
-      'Um Office Imposters spielen zu können, braucht jede*r Spieler*in ein eigenes mobiles Endgerät. Wenn das Gerät mobile Daten zur Verfügung hat, ist das super, wir werden aber auch ein WLAN zur Verfügung stellen.',
+      'Um Office Imposters spielen zu können, braucht jede*r Spieler*in ein eigenes aufgeladenes mobiles Endgerät. Wenn das Gerät mobile Daten zur Verfügung hat, ist das super, wir werden aber auch ein WLAN zur Verfügung stellen.',
   },
   {
     question: 'Auf welchen Geräten kann ich spielen?',

@@ -33,7 +33,14 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} ${digitalt.variable} antialiased`}>
         {children}
         <footer className="bg-[#233D4D] py-6 text-center text-sm text-gray-400">
-          <div>© {new Date().getFullYear()} Office Imposters. Alle Rechte vorbehalten.</div>
+          <div className="text-white mb-3">
+            Ein Spiel von{" "}
+            <a className="underline" href="https://schluesselmomente-escape-rooms.de/" target="_blank">
+              Schlüsselmomente Escape Rooms
+            </a>
+            .
+          </div>
+          <div>© {new Date().getFullYear()} Schlüsselmomente Escape Rooms. Alle Rechte vorbehalten.</div>
           <div>
             <a href="https://schluesselmomente-escape-rooms.de/datenschutz/" className="hover:underline" target="_blank">
               Datenschutz

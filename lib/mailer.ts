@@ -39,7 +39,7 @@ function buildTextBody(name: string, slotLabel: string, cancelUrl: string): stri
     VENUE_ADDRESS,
     VENUE_MAPS_URL,
     '',
-    'Um am Spiel teilnehmen zu können, brauchst du ein mobiles Endgerät (Smartphone oder Tablet). Bitte stelle sicher, dass alle Spieler*innen ein geeignetes Gerät dabei haben.',
+    'Um am Spiel teilnehmen zu können, brauchst du ein aufgeladenes mobiles Endgerät (Smartphone oder Tablet). Bitte stelle sicher, dass alle Spieler*innen ein geeignetes Gerät dabei haben.',
     'Bitte komme 5–10 Minuten vor deinem Termin, damit wir pünktlich starten können.',
     '',
     'Wir freuen uns auf dich!',
@@ -103,7 +103,7 @@ function buildHtmlBody(name: string, slotLabel: string, cancelUrl: string, baseU
 
             <!-- Notes -->
             <p style="margin:0 0 10px 0;font-family:Arial,sans-serif;font-size:14px;color:#333333;line-height:1.6;">
-              Bitte stelle sicher, dass alle Spieler*innen ein <strong>mobiles Endger&auml;t</strong> (Smartphone oder Tablet) dabei haben &ndash; es wird f&uuml;r das Spiel ben&ouml;tigt.
+              Bitte stelle sicher, dass alle Spieler*innen ein <strong> aufgeladenes mobiles Endger&auml;t</strong> (Smartphone oder Tablet) dabei haben &ndash; es wird f&uuml;r das Spiel ben&ouml;tigt.
             </p>
             <p style="margin:0 0 28px 0;font-family:Arial,sans-serif;font-size:14px;color:#333333;line-height:1.6;">
               Bitte komme 5&ndash;10 Minuten fr&uuml;her, damit wir p&uuml;nktlich mit allen starten k&ouml;nnen.

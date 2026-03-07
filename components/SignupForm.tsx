@@ -192,7 +192,7 @@ export default function SignupForm() {
 
             <div className="mb-6 flex items-start gap-3">
               <label htmlFor="marketing_opt_in" className="text-sm text-white">
-                Jede*r Spieler*in braucht ein mobiles Endgerät (Smartphone oder Tablet) für die Teilnahme. Bitte stelle sicher, dass alle Teilnehmer*innen ein geeignetes Gerät dabei haben. 
+                Jede*r Spieler*in braucht ein aufgeladenes mobiles Endgerät (Smartphone oder Tablet) für die Teilnahme. Bitte stelle sicher, dass alle Teilnehmer*innen ein geeignetes Gerät dabei haben. 
               </label>
             </div>
 
