@@ -173,7 +173,7 @@ function buildHtmlBody(name: string, slotLabel: string, cancelUrl: string, baseU
               </tr>
             </table>
             <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#6a8a99;text-align:center;">
-              &copy; Office Imposters. Alle Rechte vorbehalten.
+              &copy; Schlüsselmomente Escape Rooms GbR. Alle Rechte vorbehalten.
             </p>
           </td>
         </tr>

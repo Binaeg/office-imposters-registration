@@ -19,8 +19,8 @@ const vintages = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Office Imposter – Frühen Zugang sichern",
-  description: "Das soziale Deduktionsspiel für dein Büro. Melde dich jetzt für den frühen Zugang an!",
+  title: "Office Imposters",
+  description: "Ein Reallife Deduction Game bei Konstanz spielt!",
 };
 
 export default function RootLayout({
