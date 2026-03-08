@@ -30,7 +30,7 @@ export default function VideoSection() {
               width={400}
               height={400}
               aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-contain opacity-30 md:scale-150 pointer-events-none select-none"
+              className="absolute inset-20 md:inset-25 w-full h-full object-contain opacity-30 md:scale-150 pointer-events-none select-none"
             />
             <h3 className="mb-4 text-2xl font-extrabold text-primary">Findet den Verräter unter euch</h3>
             <p className="text-gray-300 leading-relaxed">
