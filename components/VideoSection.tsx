@@ -32,15 +32,19 @@ export default function VideoSection() {
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-contain opacity-30 md:scale-150 pointer-events-none select-none"
             />
-            <h3 className="mb-4 text-2xl font-extrabold text-primary">Findet den Verräter unter euch</h3>
-            <p className="text-gray-300 leading-relaxed">
-              Office Imposters ist eine Reallife-Adaption von Among Us im Bürosetting. Während die Mitarbeitenden versuchen, ihre Aufgaben zu erfüllen, mischen sich die Imposter unter sie, um sie von der Erfüllung der Aufgaben abzuhalten. Durch Diskussionen und Abstimmungen müssen die Spielenden herausfinden, wer die Imposter sind, bevor es zu spät ist!
-            </p>
-            <ul className="mt-6 space-y-2 text-gray-300 list-disc pl-5">
-              <li>Verstecke deine Rolle</li>
-              <li>Diskutiere &amp; überzeuge</li>
-              <li>Enttarne die Imposter</li>
-            </ul>
+            <div className="mx-auto max-w-md rounded-2xl bg-white/10 backdrop-blur border border-white/30 p-8 shadow-xl">
+              <h3 className="mb-4 text-2xl font-extrabold text-primary">Findet den Verräter unter euch</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Office Imposters ist eine Reallife-Adaption von Among Us im Bürosetting. Während die Mitarbeitenden versuchen, ihre Aufgaben zu erfüllen, mischen sich die Imposter
+                unter sie, um sie von der Erfüllung der Aufgaben abzuhalten. Durch Diskussionen und Abstimmungen müssen die Spielenden herausfinden, wer die Imposter sind, bevor es
+                zu spät ist!
+              </p>
+              <ul className="mt-6 space-y-2 text-gray-300 list-disc pl-5">
+                <li>Verstecke deine Rolle</li>
+                <li>Diskutiere &amp; überzeuge</li>
+                <li>Enttarne die Imposter</li>
+              </ul>
+            </div>
           </div>
         </div>
       </Container>

@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
         <p className="mx-auto mb-10 max-w-xl font-medium text-white text-md sm:text-lg lg:text-xl">
           Wer schleicht durchs Büro? Findet die Verräter unter euch –
-          das Reallife Social Deduction Game bei Konstanz spielt!
+          das Reallife Social Deduction Game bei &quot;Konstanz spielt!&quot;
         </p>
         <button
           onClick={scrollToSignup}
