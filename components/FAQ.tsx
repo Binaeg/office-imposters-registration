@@ -2,39 +2,40 @@
 
 import { useState } from 'react';
 import Container from './Container';
+import Image from 'next/image';
 
 const faqs = [
   {
     question: 'Was ist Office Imposters?',
     answer:
-      'Office Imposters ist ein soziales Deduktionsspiel, bei dem Spieler versuchen, den Imposter unter ihren Kollegen zu entlarven. Office Imposters ist vergleichbar mit Among Us, Werwölfe oder Blood on the Clocktower.',
+      'Office Imposters ist eine Reallife Adaption von Among Us, also ein Social Deduction Game. Bei diesem geht es darum, Aufgaben zu erfüllen und die Imposter unter den anderen Spielenden zu enttarnen. Als Verräter geht es darum, das restliche Team zu sabotieren. Office Imposters ist vergleichbar mit Mafia, Werwölfe oder Blood on the Clocktower.',
   },
   {
     question: 'Was muss ich mitbringen?',
     answer:
-      'Um Office Imposters spielen zu können, braucht jede*r Spieler*in ein eigenes aufgeladenes mobiles Endgerät. Wenn das Gerät mobile Daten zur Verfügung hat, ist das super, wir werden aber auch ein WLAN zur Verfügung stellen.',
+      'Um Office Imposters spielen zu können, braucht alle Spielenden ein eigenes aufgeladenes mobiles Endgerät. Wenn das Gerät mobile Daten zur Verfügung hat, ist das super, wir werden aber auch ein WLAN zur Verfügung stellen.',
   },
   {
-    question: 'Auf welchen Geräten kann ich spielen?',
+    question: 'Warum brauche ich ein mobiles Endgerät?',
     answer:
-      'Um am Spiel teilnehmen zu können, braucht das Gerät Internet Zugang. Es muss keine App installiert werden, alles wird über den Browser erreichbar sein. Dementsprechend kann jedes Gerät verwendet werden.',
+      'Der Großteil des Spiels wird im echten Leben (Reallife) stattfinden. Das mobile Endgerät wird benötigt, um die geheimen Rollen und Aufgaben der Spielenden anzuzeigen. Das mobile Endgerät unterstützt den Spielprozess, das Spiel an sich ist aber nicht digital.',
   },
   {
     question: 'Wie lange dauert eine Spielrunde?',
     answer:
-      'Wir planen damit, dass eine Runde etwa 60 Minuten dauert. Je nachdem, wie (un-)geschickt sich die Imposter anstellen, kann eine Runde schneller oder kürzer vorbeigehen. Sollte eine Runde frühzeitig zu Ende sein, kann es sein, dass wir eine zweite Runde beginnen.',
+      'Wir planen damit, dass eine Runde etwa 60 Minuten dauert. Je nach Spieldynamik und Rollenverteilung kann eine Runde jedoch kürzer oder länger dauern. Sollte eine Runde besonders frühzeitig zu Ende sein, kann es sein, dass wir eine zweite Runde beginnen.',
   },
   {
-    question: 'Ist das Spiel kostenlos?',
+    question: 'Ist die Teilnahme an Office Imposters kostenlos?',
     answer:
-      'Die Teilnahme bei Office Imposters bei Konstanz spielt! ist kostenlos.',
+      'Ja, die Teilnahme bei Office Imposters während \'Konstanz spielt!\' ist kostenlos.',
   },
   {
     question: "Für welches Alter ist das Spiel geeignet?",
     answer: "Wir empfehlen das Spiel ab einem Alter von 12 Jahren. Nach oben hin gibt es keine Altersgrenze, auch ältere Menschen haben Spaß an dem Spiel!",
   },
   {
-    question: "Wo wird Office Imposters bei Konstanz spielt! stattfinden?",
+    question: "Wo wird Office Imposters bei 'Konstanz spielt!' stattfinden?",
     answer: "Office Imposters wird im Coworkingspace St. Johann, Brückengasse 1b, 78462 Konstanz stattfinden."
   }
 ];
@@ -47,8 +48,16 @@ export default function FAQ() {
   }
 
   return (
-    <section className="bg-[#1a2e3a] py-20">
-      <Container>
+    <section className="bg-[#1a2e3a] py-20 relative overflow-hidden">
+      <Image
+        src="/coffee/coffee-stain-2.svg"
+        alt="Coffee Stain"
+        width={500}
+        height={500}
+        aria-hidden="true"
+        className="absolute right-0 sm:right-50 md:right-70 top-1/2 -translate-y-1/2 w-72 md:w-96 opacity-30 pointer-events-none select-none"
+      />
+      <Container className='relative z-10'>
         <h2 className="mb-10 text-center md:text-7xl text-5xl font-family-digitalt text-primary">
           Häufige Fragen
         </h2>

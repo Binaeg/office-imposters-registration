@@ -201,7 +201,7 @@ export async function sendConfirmationEmail(
   await transporter.sendMail({
     from: `"Office Imposters" <${process.env.SMTP_FROM}>`,
     to,
-    subject: 'Office Imposters bei Konstanz spielt! - Deine Anmeldebestätigung',
+    subject: 'Office Imposters bei &quot;Konstanz spielt!&quot; - Deine Anmeldebestätigung',
     text: buildTextBody(name, slotLabel, cancelUrl),
     html: buildHtmlBody(name, slotLabel, cancelUrl, baseUrl),
   });

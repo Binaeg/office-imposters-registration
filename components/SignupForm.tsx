@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import Container from "./Container";
 import { SLOT_DATES, SLOT_TIMES, formatSlotDate, type SlotDate, type SlotTime } from "@/lib/slots";
+import Image from "next/image";
 
 interface FormState {
   name: string;
@@ -65,9 +66,17 @@ export default function SignupForm() {
   }
 
   return (
-    <section id="signup" className="bg-[#233D4D] py-20">
+    <section id="signup" className="bg-[#233D4D] py-20 relative overflow-hidden">
+      <Image
+        src="/coffee/coffee-stain-5.svg"
+        alt="Coffee Stain"
+        aria-hidden="true"
+        width={500}
+        height={500}
+        className="absolute md:left-50 top-1/2 -translate-y-1/2 w-72 md:w-96 opacity-40 pointer-events-none select-none"
+      />
       <Container>
-        <h2 className="mb-8 text-center md:text-7xl text-5xl font-family-digitalt text-primary ">Jetzt bei Konstanz spielt! ausprobieren</h2>
+        <h2 className="mb-8 text-center md:text-7xl text-5xl font-family-digitalt text-primary ">Jetzt bei &quot;Konstanz spielt!&quot; ausprobieren</h2>
 
         {status === "success" ? (
           <div className="mx-auto max-w-md rounded-2xl bg-[#1a2e3a] p-8 text-center shadow-xl">

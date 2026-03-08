@@ -9,21 +9,21 @@ export default function Hero() {
   }
 
   return (
-    <section className="bg-[#233D4D] py-24 text-center">
+    <section className="bg-background py-24 text-center">
       <Container>
         <div className="mb-6 flex justify-center">
           <Image
-            src="/header.jpeg"
+            src="/logo.webp"
             alt="Office Imposter"
-            width={480}
-            height={160}
+            width={1485}
+            height={557}
             priority
-            className="max-w-xs sm:max-w-md object-contain drop-shadow-lg"
+            className="md:max-w-200 object-contain drop-shadow-lg"
           />
         </div>
-        <p className="mx-auto mb-10 max-w-xl text-lg font-medium text-white sm:text-xl">
-          Wer schleicht sich durchs Büro? Finde den Imposter unter deinen Kollegen –
-          das soziale Deduktionsspiel für dein Team.
+        <p className="mx-auto mb-10 max-w-xl font-medium text-white text-md sm:text-lg lg:text-xl">
+          Wer schleicht durchs Büro? Findet die Verräter unter euch –
+          das Reallife Social Deduction Game bei Konstanz spielt!
         </p>
         <button
           onClick={scrollToSignup}
