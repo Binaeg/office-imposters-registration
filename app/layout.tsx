@@ -20,7 +20,7 @@ const digitalt = localFont({
 
 export const metadata: Metadata = {
   title: "Office Imposters",
-  description: "Ein Reallife Deduction Game bei &quot;Konstanz spielt!&quot;",
+  description: "Wer schleicht durchs Büro? Findet die Verräter unter euch – das Reallife Social Deduction Game bei Konstanz spielt!",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
