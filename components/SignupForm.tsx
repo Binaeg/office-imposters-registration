@@ -76,7 +76,7 @@ export default function SignupForm() {
         className="absolute md:left-50 top-1/2 -translate-y-1/2 w-72 md:w-96 opacity-40 pointer-events-none select-none"
       />
       <Container>
-        <h2 className="mb-8 text-center md:text-7xl text-5xl font-family-digitalt text-primary ">Jetzt bei &quot;Konstanz spielt!&quot; ausprobieren</h2>
+        <h2 className="mb-8 text-center md:text-7xl text-4xl font-family-digitalt text-primary hyphens-auto">Jetzt bei &quot;Konstanz spielt!&quot; ausprobieren</h2>
 
         {status === "success" ? (
           <div className="mx-auto max-w-md rounded-2xl bg-[#1a2e3a] p-8 text-center shadow-xl">

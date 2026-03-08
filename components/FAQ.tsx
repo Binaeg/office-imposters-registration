@@ -58,7 +58,7 @@ export default function FAQ() {
         className="absolute right-0 sm:right-50 md:right-70 top-1/2 -translate-y-1/2 w-72 md:w-96 opacity-30 pointer-events-none select-none"
       />
       <Container className='relative z-10'>
-        <h2 className="mb-10 text-center md:text-7xl text-5xl font-family-digitalt text-primary">
+        <h2 className="mb-10 text-center md:text-7xl text-4xl font-family-digitalt text-primary hyphens-auto">
           Häufige Fragen
         </h2>
         <div className="mx-auto max-w-2xl space-y-3">
