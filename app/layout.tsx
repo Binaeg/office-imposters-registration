@@ -25,6 +25,18 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  openGraph: {
+    title: "Office Imposters",
+    description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Office Imposters",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

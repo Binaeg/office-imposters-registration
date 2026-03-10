@@ -25,12 +25,12 @@ export default function VideoSection() {
           <div className="order-2 md:order-2 md:flex-1 md:max-w-sm flex flex-col justify-center text-center md:text-left relative">
             <div className="mx-auto max-w-md rounded-2xl p-8">
               <h3 className="mb-4 text-2xl font-extrabold text-primary">Findet den Verräter unter euch</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Office Imposters ist eine Reallife-Adaption von Among Us im Bürosetting. Während die Mitarbeitenden versuchen, ihre Aufgaben zu erfüllen, mischen sich die Imposter
                 unter sie, um sie von der Erfüllung der Aufgaben abzuhalten. Durch Diskussionen und Abstimmungen müssen die Spielenden herausfinden, wer die Imposter sind, bevor es
                 zu spät ist!
               </p>
-              <ul className="mt-6 space-y-2 text-gray-300 list-disc pl-5">
+              <ul className="mt-6 space-y-2 text-white list-disc pl-5">
                 <li>Verstecke deine Rolle</li>
                 <li>Diskutiere &amp; überzeuge</li>
                 <li>Enttarne die Imposter</li>
