@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
     images: ["/og-image.png"],
   },
+  verification: {
+    google: "rE8WLEjXXyrZAdFACxNGuQeM-7I_3mhiLeK46cnpHa8",
+  },
 };
 
 export default function RootLayout({
