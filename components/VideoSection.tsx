@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Container from "./Container";
 
 export default function VideoSection() {
@@ -24,15 +23,7 @@ export default function VideoSection() {
 
           {/* Teaser text – left on desktop, below video on mobile (order-2 / order-1) */}
           <div className="order-2 md:order-2 md:flex-1 md:max-w-sm flex flex-col justify-center text-center md:text-left relative">
-            <Image
-              src="/coffee/coffee-stain-3.svg"
-              alt="Coffee Stain"
-              width={400}
-              height={400}
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-contain opacity-30 md:scale-150 pointer-events-none select-none"
-            />
-            <div className="mx-auto max-w-md rounded-2xl bg-white/10 backdrop-blur border border-white/30 p-8 shadow-xl">
+            <div className="mx-auto max-w-md rounded-2xl p-8">
               <h3 className="mb-4 text-2xl font-extrabold text-primary">Findet den Verräter unter euch</h3>
               <p className="text-gray-300 leading-relaxed">
                 Office Imposters ist eine Reallife-Adaption von Among Us im Bürosetting. Während die Mitarbeitenden versuchen, ihre Aufgaben zu erfüllen, mischen sich die Imposter
