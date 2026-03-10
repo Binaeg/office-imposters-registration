@@ -19,8 +19,20 @@ const digitalt = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://office-imposters.schluesselmomente-escape-rooms.de"),
   title: "Office Imposters",
   description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
+  keywords: ["Office Imposters", "Social Deduction Game", "Konstanz spielt", "Among Us Reallife", "Escape Room Konstanz"],
+  authors: [{ name: "Schlüsselmomente Escape Rooms", url: "https://schluesselmomente-escape-rooms.de" }],
+  creator: "Schlüsselmomente Escape Rooms",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -28,14 +40,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Office Imposters",
     description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Office Imposters",
-      },
-    ],
+    url: "https://office-imposters.schluesselmomente-escape-rooms.de",
+    siteName: "Office Imposters",
+    locale: "de_DE",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Office Imposters" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Office Imposters",
+    description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
+    images: ["/og-image.png"],
   },
 };
 
