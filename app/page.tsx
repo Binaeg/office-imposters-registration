@@ -4,39 +4,61 @@ import SignupForm from "@/components/SignupForm";
 import FAQ from "@/components/FAQ";
 
 export default function Home() {
-  const jsonLd = {
+  const businessSchema = {
     "@context": "https://schema.org",
-    "@type": "EntertainmentBusiness", // Better for local SEO than 'Event'
+    "@type": "EntertainmentBusiness",
     name: "Office Imposters - Teamevent Konstanz",
-    description: "Einzigartiges Teamevent & Teambuilding Game in Konstanz. Findet die Verräter im Reallife Social Deduction Game.",
+    description: "Mobiles Reallife Social Deduction Game für Teambuilding in Konstanz.",
     url: "https://office-imposters.schluesselmomente-escape-rooms.de",
+    logo: "https://office-imposters.schluesselmomente-escape-rooms.de/icon.png",
     image: "https://office-imposters.schluesselmomente-escape-rooms.de/og-image.png",
+    priceRange: "€€",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Konstanz",
-      addressRegion: "Baden-Württemberg",
-      addressCountry: "DE",
+        streetAddress: "St.-Gebhard-Str. 5a",
+        addressLocality: "Konstanz",
+        postalCode: "78467",
+        addressCountry: "DE",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 47.6603, // Optional: Add exact coordinates for Konstanz
-      longitude: 9.1758,
+  };
+
+  const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Office Imposters @ Konstanz spielt!",
+    description: "Testet das neue Reallife Social Deduction Game Office Imposters!",
+    startDate: "2026-03-28T10:00:00+01:00",
+    endDate: "2026-03-29T18:00:00+01:00",
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: "Coworkingspace St. Johann",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Brückengasse 1b",
+        addressLocality: "Konstanz",
+        postalCode: "78462",
+        addressCountry: "DE",
+      },
     },
-    openingHours: "Mo-Su 09:00-22:00", // Adjust to your actual hours
-    priceRange: "$$",
-    parentOrganization: {
+    offers: {
+      "@type": "Offer",
+      url: "https://office-imposters.schluesselmomente-escape-rooms.de",
+      price: "0",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+    },
+    organizer: {
       "@type": "Organization",
       name: "Schlüsselmomente Escape Rooms",
-      url: "https://schluesselmomente-escape-rooms.de",
     },
   };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {/* Pro Tip: Use an <h1> inside your Hero that contains 
-         "Teamevent Konstanz" if you haven't already! 
-      */}
+      {/* Wir geben beide Schemas aus – Google verknüpft diese */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([businessSchema, eventSchema]) }} />
       <Hero />
       <VideoSection />
       <SignupForm />
