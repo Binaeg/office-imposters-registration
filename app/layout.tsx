@@ -1,55 +1,57 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
+const geistMono = Geist_Mono({ variable: "--font-font-mono", subsets: ["latin"], display: "swap" });
+const digitalt = localFont({ src: "../public/Digitalt.ttf", variable: "--font-digitalt", display: "swap" });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const digitalt = localFont({
-  src: "../public/Digitalt.ttf",
-  variable: "--font-digitalt",
-});
+export const viewport: Viewport = {
+  themeColor: "#233D4D",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://office-imposters.schluesselmomente-escape-rooms.de"),
-  title: "Office Imposters",
-  description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
-  keywords: ["Office Imposters", "Social Deduction Game", "Konstanz spielt", "Among Us Reallife", "Escape Room Konstanz"],
+  // Leading with the target keywords for maximum SEO impact
+  title: "Teamevent Konstanz | Teambuilding & Social Deduction | Office Imposters",
+  description:
+    "Das ultimative Teamevent in Konstanz: Office Imposters! Stärken Sie Ihr Teambuilding mit unserem Reallife Social Deduction Game. Jetzt für Firmen & Gruppen anfragen.",
+  keywords: [
+    "Teamevent Konstanz",
+    "Teambuilding Konstanz",
+    "Firmenevent Konstanz",
+    "Betriebsausflug Konstanz",
+    "Office Imposters",
+    "Social Deduction Game Reallife",
+    "Escape Room Konstanz Alternative",
+  ],
   authors: [{ name: "Schlüsselmomente Escape Rooms", url: "https://schluesselmomente-escape-rooms.de" }],
-  creator: "Schlüsselmomente Escape Rooms",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
-  alternates: {
-    canonical: "/",
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
   openGraph: {
-    title: "Office Imposters",
-    description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
+    title: "Teamevent & Teambuilding in Konstanz | Office Imposters",
+    description: "Suchen Sie ein besonderes Teamevent in Konstanz? Entlarven Sie die Verräter bei Office Imposters – Spaß, Strategie und echtes Teambuilding.",
     url: "https://office-imposters.schluesselmomente-escape-rooms.de",
-    siteName: "Office Imposters",
+    siteName: "Office Imposters - Schlüsselmomente",
     locale: "de_DE",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Office Imposters" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Teamevent Konstanz Office Imposters" }],
+  },
+  icons: {
+    icon: [
+      { url: "/android-chrome-512x512.png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Office Imposters",
-    description: "Findet die Verräter – das Reallife Social Deduction Game bei Konstanz spielt!",
+    title: "Teamevent Konstanz | Office Imposters",
+    description: "Das neue Highlight für Teambuilding in Konstanz. Wer ist der Imposter?",
     images: ["/og-image.png"],
   },
   verification: {
@@ -57,34 +59,33 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${digitalt.variable} antialiased`}>
+    <html lang="de" className="scroll-smooth">
+      <body className={`${geistSans.variable} ${geistMono.variable} ${digitalt.variable} antialiased min-h-screen flex flex-col`}>
+        {/* We removed the <main> here because it's already inside your Home component */}
         {children}
-        <footer className="bg-[#233D4D] py-6 text-center text-sm text-gray-400">
-          <div className="text-white mb-3">
-            Ein Spiel von{" "}
-            <a className="underline" href="https://schluesselmomente-escape-rooms.de/" target="_blank">
-              Schlüsselmomente Escape Rooms
-            </a>
-            .
-          </div>
-          <div>© {new Date().getFullYear()} Schlüsselmomente Escape Rooms. Alle Rechte vorbehalten.</div>
-          <div>
-            <a href="https://schluesselmomente-escape-rooms.de/datenschutz/" className="hover:underline" target="_blank">
-              Datenschutz
-            </a>
-            <a href="https://schluesselmomente-escape-rooms.de/impressum/" className="ml-4 hover:underline" target="_blank">
-              Impressum
-            </a>
-            <a href="https://schluesselmomente-escape-rooms.de/uber-uns/" className="ml-4 hover:underline" target="_blank">
-              Über uns
-            </a>
+        <footer className="bg-[#233D4D] py-8 text-center text-sm text-gray-400">
+          <div className="container mx-auto px-4">
+            <div className="text-white mb-4">
+              Ein besonderes{" "}
+              <Link href="/" className="hover:text-white underline">
+                Teamevent in Konstanz
+              </Link>{" "}
+              von{" "}
+              <Link href="https://schluesselmomente-escape-rooms.de/" className="underline hover:text-gray-200" target="_blank" rel="noopener">
+                Schlüsselmomente Escape Rooms
+              </Link>
+            </div>
+            <div className="mb-4">© {new Date().getFullYear()} Schlüsselmomente. Alle Rechte vorbehalten.</div>
+            <nav className="flex justify-center gap-6">
+              <Link href="https://schluesselmomente-escape-rooms.de/impressum/" className="hover:text-white" target="_blank" rel="noopener">
+                Impressum
+              </Link>
+              <Link href="https://schluesselmomente-escape-rooms.de/datenschutz/" className="hover:text-white" target="_blank" rel="noopener">
+                Datenschutz
+              </Link>
+            </nav>
           </div>
         </footer>
       </body>
