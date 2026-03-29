@@ -73,10 +73,10 @@ export default function SignupForm() {
       />
       <Container>
         <h2 className="mb-8 text-center md:text-7xl text-4xl font-family-digitalt text-primary hyphens-auto">Jetzt Kontakt aufnehmen</h2>
-        <h3 className="mb-8 text-center md:text-2xl text-4xl hyphens-auto">
+        <h3 className="mb-8 text-center md:text-2xl text-xl hyphens-auto">
           Du hast Office Imposters bei 'Konstanz spielt!' ausprobiert? Oder möchtest du mehr über das Spiel erfahren?
         </h3>
-        <h3 className="mb-8 text-center md:text-2xl text-4xl hyphens-auto font-bold">Dann kontaktiere uns!</h3>
+        <h3 className="mb-8 text-center md:text-2xl text-xl hyphens-auto font-bold">Dann kontaktiere uns!</h3>
 
         {status === "success" ? (
           <div className="mx-auto max-w-md rounded-2xl bg-[#1a2e3a] p-8 text-center shadow-xl">
