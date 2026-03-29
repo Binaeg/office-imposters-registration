@@ -8,12 +8,12 @@ const faqs = [
   {
     question: "Was ist Office Imposters?",
     answer:
-      "Office Imposters ist ein spannendes Teambuilding Spiel in Konstanz – eine Reallife Adaption von Social Deduction Games wie Among Us. Als Team erfüllt ihr Aufgaben und müsst die Verräter (Imposter) unter euch enttarnen. Es verbindet Strategie und Kommunikation, vergleichbar mit Mafia oder Werwölfe.",
+      "Office Imposters ist ein spannendes Teambuilding Spiel in Konstanz – eine Reallife Adaption von Among Us. Alle Mitarbeitenden haben Aufgaben im Unternehmen zu erfüllen. Allerdings sind auch einige Imposter unterwegs, die versuchen, das Unternehmen zu sabotieren. Sobald Imposter eine*n Mitarbeitenden ausscahlten, kann ein Notfallmeeting einberufen werden. In diesem Meeting kommen alle zusammen und versuchen herauszufinden, wer ein Imposter sein könnte. Durch Abstimmung können Imposter enttarnt und so das Unternehmen gerettet werden.",
   },
   {
-    question: "Was muss ich mitbringen?",
+    question: "Was braucht man um mitspielen zu können?",
     answer:
-      "Für dieses Spiel benötigen alle Spielenden ein eigenes, aufgeladenes mobiles Endgerät. Ein WLAN-Zugang wird vor Ort zur Verfügung gestellt, mobile Daten sind jedoch ebenfalls von Vorteil.",
+      "Für dieses Spiel benötigen alle Spielenden ein eigenes, aufgeladenes mobiles Endgerät. Außerdem brauchen alle Spielenden einen Internetzugang. Sollte vor Ort kein WLAN verfügbar sein, können wir ggf. ein eigenes Netzwerk aufbauen.",
   },
   {
     question: "Warum brauche ich ein mobiles Endgerät?",
@@ -23,20 +23,40 @@ const faqs = [
   {
     question: "Wie lange dauert eine Runde Office Imposters?",
     answer:
-      "Wir planen für dieses Spiel etwa 60 Minuten pro Runde ein. Je nach Spieldynamik kann es variieren. Sollte eine Runde frühzeitig enden, starten wir oft eine zweite Runde.",
+      "Wir planen für dieses Spiel etwa 60-90 Minuten pro Runde ein. Es hängt ein wenig davon ab, wie viele Personen mitspielen. Runden, mit 15 Personen gehen schneller als Runden mit 30 Personen.",
   },
   {
-    question: "Ist die Teilnahme kostenlos?",
-    answer: "Ja, die Teilnahme bei Office Imposters während des Events 'Konstanz spielt!' ist komplett kostenlos.",
-  },
-  {
-    question: "Wo findet das Teamevent während 'Konstanz spielt!' statt?",
-    answer: "Das Spiel findet im Coworkingspace St. Johann, Brückengasse 1b, 78462 Konstanz statt – der ideale Ort für innovatives Teambuilding.",
-  },
-  {
-    question: "Kann ich Office Imposters auch nach der Messe als Teamevent buchen?",
+    question: "Was kostet Office Imposters?",
     answer:
-      "Absolut! Office Imposters ist perfekt als Teamevent oder Teambuilding-Maßnahme geeignet. Es fördert die Kommunikation, das Vertrauen und den Teamgeist auf spielerische Weise. Wir bringen das Spiel gerne zu euch ins Büro oder an einen Ort eurer Wahl in Konstanz und Umgebung. Sprecht uns gerne bei der Spielemesse an oder schreibt uns eine E-Mail.",
+      "Eine genaue Preisgestaltung haben wir nicht, das hängt von der Anfahrt, der Anzahl der Runden und den Mitspielenden Personen ab. Eine grobe Richtlinie sind 40€/Person. Oft machen wir Pauschalpreise, die im einzelnen abgesprochen werden.",
+  },
+  {
+    question: "Wo kann ich Office Imposters spielen?",
+    answer:
+      "Office Imposters ist ein mobiles Teamevent, das heißt wir kommen zu euch ins Unternehmen, in die Schule oder auch jeden anderen Ort, den ihr uns vorschlagt. Die Räumlichkeiten sollten etwas verwinkelt sein, mehrere Räume sind aber auch geeignet. Außerdem braucht es einen Meeting Raum, in dem alle Mitarbeitenden einen Platz an einem 'Runden Tisch' Platz finden. Gerne können wir in einem kurzen Telefonat klären, was es genau braucht.",
+  },
+  {
+    question: "Ab wann kann ich Office Imposters buchen?",
+    answer:
+      "Aktuell sind wir noch in der Entwicklung, der erste Prototyp steht. Die Rückmeldungen bei 'Konstanz spielt!' waren so gut, dass wir das Produkt auf jeden Fall fertig entwickeln. Wir planen, bis zum Sommer so weit zu sein, dass es spielbar ist. Schreibt uns einfach an mit euren Anforderungen, dann können wir euch genauere Infos geben.",
+  },
+  {
+    question: "Wie viele Personen können mitspielen?",
+    answer:
+      "Office Imposters können wir mit bis zu 40 Personen spielen. Praxiserprobt ist es mit 35 Personen, deshalb sind wir zuversichtlich, dass es auch mit 40 Personen klappt!",
+  },
+  {
+    question: "Ab wie vielen Personen kann man Office Imposters spielen?",
+    answer: `Wir haben uns entschieden, Office Imposters ab 15 Personen anzubieten. Weniger Personen ergeben aus spieldynamischer Sicht keinen Sinn. Wenn ihr ein Teamevent für weniger Personen sucht, schaut euch gerne unseren Escape Room <a href="https://schluesselmomente-escape-rooms.de/" class="text-primary hover:underline" target="_blank">'Die Suche nach dem heiligen Gral'</a> an.`,
+  },
+  {
+    question: "Ist Office Imposters für alle Altersgruppen geeignet?",
+    answer:
+      "Office Imposters ist fast altersunabhängig. Es macht tatsächlich keinen Unterschied, ob ihr alle in einer Altersgruppe seid oder bunt gemischt. Es können im gleichen Spiel Familien mit ihren Kindern mitspielen aber auch Erwachsene. In solchen Konstellationen entstehen oft besonders lustige Momente im Notfallmeeting. Das Spiel ist also auch geeignet, wenn ihr es als Sommerfest oder Weihnachtsfeier den Familien eurer Kolleg*innen spielen möchtet.",
+  },
+  {
+    question: "Wir haben weitere Fragen, wie erreichen wir euch?",
+    answer: `Ihr erreicht uns auf allen gängigen Kanälen. Entweder ihr nutzt das Kontaktformular von oben. Alternativ könnt ihr auch direkt eine E-Mail an uns schreiben. Oder aber ihr ruft uns an. Die Kontaktdaten findet ihr <a href="https://schluesselmomente-escape-rooms.de/kontakt/" class="text-primary hover:underline" target="_blank" ">hier</a>.`,
   },
 ];
 
@@ -92,7 +112,7 @@ function FAQItem({ faq, isOpen, onToggle }: FAQItemProps) {
       {/* grid-template-rows trick: animates from 0fr → 1fr smoothly */}
       <div className="grid transition-all duration-300 ease-in-out" style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}>
         <div className="overflow-hidden">
-          <div className="px-6 pb-5 text-gray-300">{faq.answer}</div>
+          <div className="px-6 pb-5 text-gray-300" dangerouslySetInnerHTML={{ __html: faq.answer }} />
         </div>
       </div>
     </div>

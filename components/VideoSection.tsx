@@ -38,6 +38,7 @@ export default function VideoSection() {
             </div>
           </div>
         </div>
+        <h3 className="mb-4 text-2xl font-extrabold text-primary text-center mt-8">Noch Fragen? Dann schau in unsere <a href="/faq" className="text-primary hover:underline">FAQ</a> oder kontaktiere uns!</h3>
       </Container>
     </section>
   );

@@ -207,3 +207,22 @@ export async function sendConfirmationEmail(
   });
 }
 
+// ─── Generic mailer ───────────────────────────────────────────────────────────
+interface MailOptions {
+  to: string;
+  subject: string;
+  text: string;
+  html?: string;
+}
+
+export async function sendMail({ to, subject, text, html }: MailOptions) {
+  const transporter = createTransporter();
+  await transporter.sendMail({
+    from: `"Office Imposters" <${process.env.SMTP_FROM}>`,
+    to,
+    subject,
+    text,
+    html,
+  });
+}
+
