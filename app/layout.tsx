@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://office-imposters.schluesselmomente-escape-rooms.de"),
   // Leading with the target keywords for maximum SEO impact
-  title: "Teamevent Konstanz | Teambuilding & Social Deduction | Office Imposters",
+  title: "Teamevent: Office Imposters",
   description:
     "Das ultimative Teamevent in Konstanz: Office Imposters! Stärken Sie Ihr Teambuilding mit unserem Reallife Social Deduction Game. Jetzt für Firmen & Gruppen anfragen.",
   keywords: [

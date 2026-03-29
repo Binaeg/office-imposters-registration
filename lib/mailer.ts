@@ -31,7 +31,7 @@ function buildTextBody(name: string, slotLabel: string, cancelUrl: string): stri
   return [
     `Hallo ${name},`,
     '',
-    'danke für deine Anmeldung bei Office Imposters!',
+    'Danke für deine Anmeldung bei Office Imposters!',
     '',
     `Dein Termin: ${slotLabel}`,
     '',
@@ -88,7 +88,7 @@ function buildHtmlBody(name: string, slotLabel: string, cancelUrl: string, baseU
 
             <p style="margin:0 0 16px 0;font-family:Arial,sans-serif;font-size:18px;color:#1a2e3a;">Hallo ${name},</p>
             <p style="margin:0 0 24px 0;font-family:Arial,sans-serif;font-size:15px;color:#333333;line-height:1.6;">
-              danke f&uuml;r deine Anmeldung! Wir freuen uns riesig, dich bei Office Imposters begr&uuml;&szlig;en zu d&uuml;rfen.
+              Danke f&uuml;r deine Anmeldung! Wir freuen uns riesig, dich bei Office Imposters begr&uuml;&szlig;en zu d&uuml;rfen.
             </p>
 
             <!-- Timeslot box -->
@@ -201,7 +201,7 @@ export async function sendConfirmationEmail(
   await transporter.sendMail({
     from: `"Office Imposters" <${process.env.SMTP_FROM}>`,
     to,
-    subject: 'Office Imposters bei &quot;Konstanz spielt!&quot; - Deine Anmeldebestätigung',
+    subject: 'Office Imposters bei "Konstanz spielt!" - Deine Anmeldebestätigung',
     text: buildTextBody(name, slotLabel, cancelUrl),
     html: buildHtmlBody(name, slotLabel, cancelUrl, baseUrl),
   });
