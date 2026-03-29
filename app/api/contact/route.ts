@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const toUsSubject = `Neue Nachricht von ${name}`;
     const toUsText = `Name: ${name}\nE-Mail: ${email}\nNachricht: ${message}`;
     await sendMail({
-      to: process.env.CONTACT_FORM_SEND_TO!,
+      to: "info@schluessel-momente.de",
       subject: toUsSubject,
       text: toUsText,
     });

@@ -39,7 +39,7 @@ export default function Hero() {
           className="rounded-xl bg-primary hover:bg-secondary px-10 py-4 text-lg font-bold text-black hover:text-white shadow-lg transition hover:scale-105 active:scale-95"
           aria-label="Jetzt für das Teamevent in Konstanz anmelden"
         >
-          Jetzt anmelden
+          Jetzt kontaktieren
         </button>
       </Container>
     </section>

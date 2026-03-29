@@ -1,5 +1,5 @@
 CREATE TABLE messages (
-    id SERIAL PRIMARY KEY,
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name TEXT NOT NULL,
     email TEXT NOT NULL,
     message TEXT NOT NULL,
