@@ -5,14 +5,14 @@ import { sendMail } from "@/lib/mailer";
 export async function POST(req: NextRequest) {
   const supabase = supabaseServer.schema("marketing");
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, phone, message } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Bitte fülle alle Felder aus." }, { status: 400 });
     }
 
     // Save the message to the database
-    const { error: dbError } = await supabase.from("messages").insert([{ name, email, message }]);
+    const { error: dbError } = await supabase.from("messages").insert([{ name, email, phone, message }]);
 
     if (dbError) {
       console.error("Error saving message to database:", dbError);
@@ -21,7 +21,14 @@ export async function POST(req: NextRequest) {
 
     // Send email to us
     const toUsSubject = `Neue Nachricht von ${name}`;
-    const toUsText = `Name: ${name}\nE-Mail: ${email}\nNachricht: ${message}`;
+    const toUsText = [
+      `Name: ${name}`,
+      `E-Mail: ${email}`,
+      phone ? `Telefon: ${phone}` : null,
+      `Nachricht: ${message}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
     await sendMail({
       to: "info@schluessel-momente.de",
       subject: toUsSubject,

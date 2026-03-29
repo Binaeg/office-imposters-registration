@@ -8,6 +8,7 @@ import Image from "next/image";
 interface FormState {
   name: string;
   email: string;
+  phone: string;
   message: string;
   marketing_opt_in: boolean;
   slot_date: SlotDate | "";
@@ -18,6 +19,7 @@ export default function SignupForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
+    phone: "",
     message: "",
     marketing_opt_in: false,
     slot_date: "",
@@ -40,13 +42,14 @@ export default function SignupForm() {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          phone: form.phone,
           message: form.message,
         }),
       });
 
       if (response.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", message: "", marketing_opt_in: false, slot_date: "", slot_time: "" });
+        setForm({ name: "", email: "", phone: "", message: "", marketing_opt_in: false, slot_date: "", slot_time: "" });
       } else {
         const data = await response.json();
         setErrorMessage(data.error ?? "Ein Fehler ist aufgetreten");
@@ -77,10 +80,9 @@ export default function SignupForm() {
 
         {status === "success" ? (
           <div className="mx-auto max-w-md rounded-2xl bg-[#1a2e3a] p-8 text-center shadow-xl">
-            <p className="text-2xl font-bold text-primary">Anmeldung erfolgreich!</p>
+            <p className="text-2xl font-bold text-primary">Nachricht erfolgreich verschickt!</p>
             <p className="mt-3 text-white">
-              Vielen Dank für deine Anmeldung. Wir freuen uns darauf, dich bei &quot;Konstanz spielt!&quot; begrüßen zu dürfen. Du erhältst in Kürze eine Bestätigungs-E-Mail mit
-              weiteren Informationen zum Event.
+              Vielen Dank für deine Nachricht. Wir melden uns so schnell wie möglich bei dir! In der Zwischenzeit kannst du gerne unsere FAQ durchstöbern.
             </p>
           </div>
         ) : (
@@ -114,6 +116,21 @@ export default function SignupForm() {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full rounded-xl border-2 border-transparent bg-[#233D4D] px-4 py-3 text-white placeholder-gray-400 outline-none focus:border-primary"
                 placeholder="deine@email.de"
+              />
+            </div>
+
+            {/* Telefon */}
+            <div className="mb-5">
+              <label htmlFor="phone" className="mb-1 block font-semibold text-white">
+                Telefon (optional)
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                className="w-full rounded-xl border-2 border-transparent bg-[#233D4D] px-4 py-3 text-white placeholder-gray-400 outline-none focus:border-primary"
+                placeholder="+49 170 1234567"
               />
             </div>
 
