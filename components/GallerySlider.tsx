@@ -79,18 +79,21 @@ export default function GallerySlider() {
             {slides.map((slide, i) => (
               <figure
                 key={slide.src}
-                className="relative w-full shrink-0 snap-center aspect-4/3 md:aspect-3/2"
+                className="relative flex w-full shrink-0 snap-center flex-col bg-[#1a2e3a] sm:block sm:aspect-3/2"
                 aria-roledescription="slide"
                 aria-label={`${i + 1} von ${slides.length}`}
               >
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  sizes="(min-width: 1024px) 960px, 100vw"
-                  className="object-cover"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/85 via-black/50 to-transparent px-5 pb-5 pt-16 text-left sm:px-8 sm:pb-7">
+                {/* Mobile: Bild in voller Größe, Text darunter. Ab sm: Text als Overlay. */}
+                <div className="relative aspect-3/2 w-full sm:absolute sm:inset-0 sm:aspect-auto">
+                  <Image
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    sizes="(min-width: 1024px) 960px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="flex-1 px-5 py-4 text-left sm:absolute sm:inset-x-0 sm:bottom-0 sm:bg-linear-to-t sm:from-black/85 sm:via-black/50 sm:to-transparent sm:px-8 sm:pb-7 sm:pt-16">
                   <h3 className="text-xl font-extrabold text-primary sm:text-2xl">{slide.title}</h3>
                   <p className="mt-1 max-w-xl text-sm text-white sm:text-base">{slide.text}</p>
                 </figcaption>
