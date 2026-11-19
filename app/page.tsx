@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import VideoSection from "@/components/VideoSection";
+import GallerySlider from "@/components/GallerySlider";
 import ContactForm from "@/components/ContactForm";
 import FAQ from "@/components/FAQ";
 
@@ -61,6 +62,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([businessSchema, eventSchema]) }} />
       <Hero />
       <VideoSection />
+      <GallerySlider />
       <ContactForm />
       <FAQ />
     </>
